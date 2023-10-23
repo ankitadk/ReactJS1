@@ -1,2 +1,2 @@
 # ReactJS1
-This is to learn about ReactJS Library.
+This repo is to learn about ReactJS Library.
