@@ -1,3 +1,84 @@
-#heading {
-    color: red;
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.logo{
+    width: 150px;
+    height: 100px;
+}
+
+.nav-items {
+    padding: 0px 80px;
+}
+
+.nav-items > ul {
+    display: flex;
+    
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+    margin: 10px;
+    list-style-type: none;
+    font-size: 24px;
+}
+
+.search{
+    padding: 10px;
+}
+
+.rest-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.res-card {
+    width: 180px;
+    /* height: 250px; */
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    text-align: left;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.res-logo{
+    width: 100%;
+    height: 40%;
+    /* margin-bottom: -9px; */
+    border-radius: 5px;
+}
+
+.res-cuisine{
+    margin: -10px 0px;
+}
+
+.res-head{
+    /* margin-bottom: 10px; */
+}
+
+.res-font{
+    font-size: small;
+    margin: 0.5px;
+}
+
+.res-info{
+    display: flex;
+    justify-content: left;
+    margin-bottom: -10px;
+}
+
+.res-stars, del-time{
+    padding-right: 5px;
+}
+
+.res-card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 5px black;
 }
