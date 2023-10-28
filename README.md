@@ -53,3 +53,8 @@ This repo is created to learn about ReactJS Library.
 - Normal JS Utility functions
 - useState() => Superpowerful State Variables in React
 - useEffect()
+
+# 2 types of Routing in web apps
+
+-Client Side Routing
+-Server Side Routing
