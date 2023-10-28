@@ -1,98 +1,98 @@
 let resList = [
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "r1",
       name: "KFC",
       cuisines: ["Burgers", "Biryani", "Veg Snacks"],
       avgRating: 4.6,
       costForTwo: 40000,
-      deliveryTime: 36,
-      img: "https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg",
+      sla: { deliveryTime: 29 },
+      cloudinaryImageId: "cace805a6ba74137571d0f7ac92302b1",
     },
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "r2",
       name: "Meghana Foods",
       cuisines: ["Biryani", "Andhra", "South Foods"],
       avgRating: 4.4,
       costForTwo: 50000,
-      deliveryTime: 29,
-      img: "https://www.ruchiskitchen.com/wp-content/uploads/2016/03/Motichoor-Ladoo-Recipe-5.jpg.webp",
+      sla: { deliveryTime: 29 },
+      cloudinaryImageId: "56c9ab92bd79745fd152a30fa2525426",
     },
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "r3",
       name: "Dominos",
       cuisines: ["Biryani", "Andhra", "South Foods"],
       avgRating: 3.4,
       costForTwo: 50000,
-      deliveryTime: 29,
-      img: "https://www.ruchiskitchen.com/wp-content/uploads/2016/03/Motichoor-Ladoo-Recipe-5.jpg.webp",
+      sla: { deliveryTime: 29 },
+      cloudinaryImageId: "bb7ae131544c7d37e10fc5faf76f09d6",
     },
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "r4",
       name: "McD",
       cuisines: ["Biryani", "Andhra", "South Foods"],
       avgRating: 2.4,
       costForTwo: 50000,
-      deliveryTime: 29,
-      img: "https://www.ruchiskitchen.com/wp-content/uploads/2016/03/Motichoor-Ladoo-Recipe-5.jpg.webp",
+      sla: { deliveryTime: 29 },
+      cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
     },
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "r5",
       name: "Monginis",
       cuisines: ["Biryani", "Andhra", "South Foods"],
       avgRating: 1.4,
       costForTwo: 50000,
-      deliveryTime: 29,
-      img: "https://j6e2i8c9.rocketcdn.me/wp-content/uploads/2021/10/Mohanthal-recipe-1.jpg",
+      sla: { deliveryTime: 29 },
+      cloudinaryImageId: "edwvxmied0cj3m23gphk",
     },
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "r6",
       name: "Tople",
       cuisines: ["Biryani", "Andhra", "South Foods"],
       avgRating: 2.8,
       costForTwo: 50000,
-      deliveryTime: 29,
-      img: "https://www.ruchiskitchen.com/wp-content/uploads/2016/03/Motichoor-Ladoo-Recipe-5.jpg.webp",
+      sla: { deliveryTime: 29 },
+      cloudinaryImageId: "fgizj8q1dx8n0wq6cmzb",
     },
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "r7",
       name: "Kamat",
       cuisines: ["Biryani", "Andhra", "South Foods"],
       avgRating: 4.4,
       costForTwo: 50000,
-      deliveryTime: 29,
-      img: "https://www.ruchiskitchen.com/wp-content/uploads/2016/03/Motichoor-Ladoo-Recipe-5.jpg.webp",
+      sla: { deliveryTime: 29 },
+      cloudinaryImageId: "vw6n5betlssnqelt7rmu",
     },
   },
   {
     type: "restaurant",
-    data: {
+    info: {
       id: "r8",
       name: "Sharada Classic",
       cuisines: ["Biryani", "Andhra", "South Foods"],
       avgRating: 4.4,
       costForTwo: 50000,
-      deliveryTime: 29,
-      img: "https://www.ruchiskitchen.com/wp-content/uploads/2016/03/Motichoor-Ladoo-Recipe-5.jpg.webp",
+      sla: { deliveryTime: 29 },
+      cloudinaryImageId: "1ace5fa65eff3e1223feb696c956b38b",
     },
   },
 ];
