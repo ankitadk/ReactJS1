@@ -8,10 +8,10 @@ const Header = () => {
   // if no dependency array => useEffect is called on every render
   // if the dependency array is empty = [] => useEffect is called only on initial render and only once
   // if dependency array is [btnNameReact] => useEffect is called everytime btnNameReact is updated
-  console.log("header rendered");
+  //   console.log("header rendered");
 
   useEffect(() => {
-    console.log("useEffect called");
+    // console.log("useEffect called");
   }, [btnNameReact]);
 
   return (
@@ -25,7 +25,7 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">Abouttt Us</Link>
+            <Link to="/about">About Us</Link>
           </li>
           <li>
             <Link to="/contact">Contact Us</Link>
