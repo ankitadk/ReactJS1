@@ -1,9 +1,10 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 // import resList from "../utils/mockData";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   //Local State Variable - super powerful variable
@@ -13,12 +14,14 @@ const Body = () => {
   //   const setListOfRestaurants = arr[1];
   const [searchText, setSearchText] = useState("");
 
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
   useEffect(() => {
     fetchData();
   }, []);
 
   //Whenever state variable updates, react triggers a reconciliation cycle (re-renders the component)
-  console.log("body rendered");
+  //   console.log("body rendered");
 
   const fetchData = async () => {
     const data = await fetch(
@@ -26,7 +29,7 @@ const Body = () => {
     );
 
     const json = await data.json();
-
+    // console.log(json);
     //Optional Chaining
     setListOfRestaurants(
       json.data?.cards[5]?.card.card?.gridElements?.infoWithStyle?.restaurants
@@ -35,7 +38,7 @@ const Body = () => {
       json.data?.cards[5]?.card.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-
+  //   console.log(listOfRestaurants);
   //Conditional Rendering
   //   if (listOfRestaurants.length === 0) {
   //     return <Shimmer />;
@@ -50,24 +53,27 @@ const Body = () => {
       </h1>
     );
 
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
+      <div className="filter m-4 p-4">
         <input
           type="text"
-          className="search-box"
+          className="border border-solid border-black"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
         />
         <button
+          className="bg-green-100 m-4 px-4 py-2 rounded-lg"
           onClick={() => {
             //Filter the Restaurant Cards and update the UI
             //SearchText
-            console.log(searchText);
+            // console.log(searchText);
             const filteredRestaurants = listOfRestaurants.filter((ele) =>
               ele.info.name.toLowerCase().includes(searchText.toLowerCase())
             );
@@ -77,7 +83,7 @@ const Body = () => {
           Search
         </button>
         <button
-          className="filter-btn"
+          className="bg-gray-100 m-4 px-4 py-2 rounded-lg"
           onClick={() => {
             const filteredList = listOfRestaurants.filter(
               (ele) => ele.info.avgRating >= 4.5
@@ -87,14 +93,26 @@ const Body = () => {
         >
           Top Rated Rastaurants
         </button>
+        <label>Username : </label>
+        <input
+          placeholder=""
+          className="border border-black"
+          value={loggedInUser}
+          onChange={(e) => setUserName(e.target.value)}
+        />
       </div>
-      <div className="rest-container">
+      <div className="flex flex-wrap justify-center">
         {filteredRestaurants.map((restaurant) => (
           <Link
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {/*If the restaurant is promoted then add a promoted label to it*/}
+            {restaurant.info.isOpen == true ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>

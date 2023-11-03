@@ -21,6 +21,8 @@
     },
     "homepage": "https://github.com/ankitadk/ReactJS1#readme",
     "devDependencies": {
+        "@types/react": "^18.2.34",
+        "@types/react-dom": "^18.2.14",
         "parcel": "^2.10.0",
         "postcss": "^8.4.31",
         "process": "^0.11.10",

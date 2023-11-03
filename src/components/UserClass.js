@@ -4,7 +4,7 @@ class userClass extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log(this.props.name + " Child Constructor");
+    // console.log(this.props.name + " Child Constructor");
     this.state = {
       userInfo: {
         name: "Tommy",
@@ -15,7 +15,7 @@ class userClass extends React.Component {
   }
 
   async componentDidMount() {
-    console.log(this.props.name + " Child component did mount");
+    // console.log(this.props.name + " Child component did mount");
     //API Call
     const data = await fetch("https://api.github.com/users/akshaymarch7");
     const json = await data.json();
@@ -26,7 +26,7 @@ class userClass extends React.Component {
   }
 
   render() {
-    console.log(this.props.name + " Child Render");
+    // console.log(this.props.name + " Child Render");
     // console.log(this.state.userInfo);
     const { name, location, avatar_url } = this.state.userInfo;
     return (
@@ -40,11 +40,11 @@ class userClass extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log("Component Did Update");
+    // console.log("Component Did Update");
   }
 
   componentWillUnmount() {
-    console.log("Component Unmounted");
+    // console.log("Component Unmounted");
   }
 }
 
