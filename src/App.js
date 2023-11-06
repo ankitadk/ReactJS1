@@ -8,6 +8,9 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import ResMenu from "./components/ResMenu";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 //Chunking
 //Code Splitting
@@ -30,17 +33,19 @@ const AppLayout = () => {
   }, []);
 
   return (
-    // Default
-    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
-      {/* Akshay Saini */}
-      <div className="app">
-        {/* <UserContext.Provider value={{ loggedInUser: "Elon Musk" }}> */}
-        {/* Elon Musk */}
-        <Header />
-        {/* </UserContext.Provider> */}
-        <Outlet />
-      </div>
-    </UserContext.Provider>
+    <Provider store={appStore}>
+      {/* Default */}
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        {/* Akshay Saini */}
+        <div className="app">
+          {/* <UserContext.Provider value={{ loggedInUser: "Elon Musk" }}> */}
+          {/* Elon Musk */}
+          <Header />
+          {/* </UserContext.Provider> */}
+          <Outlet />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
@@ -76,6 +81,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:resId",
         element: <ResMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,
