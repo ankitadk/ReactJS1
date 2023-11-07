@@ -20,6 +20,7 @@ const ItemList = ({ items, dummy }) => {
         // console.log(item);
         <div
           key={item.card.info.id}
+          data-testid="foodItems"
           className="m-2 p-2 border-b-2 text-left flex justify-between"
         >
           <div className="pr-3 w-9/12">

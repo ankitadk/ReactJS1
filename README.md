@@ -73,3 +73,16 @@ This repo is created to learn about ReactJS Library.
 - Unit Testing
 - Integration Testing
 - End to End Testing - e2e tesing
+
+# Setting up Testing in our app
+
+- Install React Testing Library
+- Install jest
+- Install Babel dependencies
+- Configure Babel
+- Configure Parcel Config file to disable default babel transpilation
+- Jest configuration [npx jest --init]
+- Install jsdom library
+- Install @babel/preset-react - to make JSX work in test cases
+- Include @babel/preset-react inside my babel config
+- Install @testing-library/jest-dom [npm i -D @testing-library/jest-dom]

@@ -10,6 +10,7 @@ const RestaurantCard = (props) => {
   //   console.log(props);
   //   const { resName, cuisine } = props;
   const { resData } = props;
+  //   console.log(resData);
 
   const { loggedInUser } = useContext(UserContext);
 
@@ -18,7 +19,10 @@ const RestaurantCard = (props) => {
   //   console.log(deliveryTime);
   //   console.log(IMG_URL + cloudinaryImageId);
   return (
-    <div className="m-4 p-4 w-48 bg-gray-100 rounded-lg hover:bg-gray-200">
+    <div
+      data-testid="resCard"
+      className="m-4 p-4 w-48 bg-gray-100 rounded-lg hover:bg-gray-200"
+    >
       <img
         alt="res-img"
         className="rounded-lg h-30"

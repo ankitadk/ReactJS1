@@ -16,7 +16,7 @@ const heading = (
     Namaste React using JSX 1
   </h1>
 );
-console.log(heading);
+// console.log(heading);
 
 const elem = <span>Span Tag </span>;
 
